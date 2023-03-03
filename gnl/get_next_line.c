@@ -6,7 +6,7 @@
 /*   By: rbenaiss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 23:22:10 by rbenaiss          #+#    #+#             */
-/*   Updated: 2023/02/10 19:38:46 by rbenaiss         ###   ########.fr       */
+/*   Updated: 2023/02/24 20:54:48 by rbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,11 @@ char	*get_next_line(int fd)
 	if (!buf)
 		return (0);
 	line = get_content(fd, buf, backup);
+	if (line == 0)
+	{
+		free (backup);
+		backup = NULL;
+	}
 	free (buf);
 	buf = NULL;
 	if (!line)

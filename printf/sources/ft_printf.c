@@ -6,7 +6,7 @@
 /*   By: rbenaiss <rbenaiss@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 00:12:06 by rbenaiss          #+#    #+#             */
-/*   Updated: 2023/02/19 00:36:19 by rbenaiss         ###   ########.fr       */
+/*   Updated: 2023/02/24 13:00:14 by rbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static void	ft_search(char s, va_list *args, int *len, int *i)
 	else if (s == 'X')
 		ft_hex(va_arg(*args, unsigned int), len, 'X');
 	else if (s == 'p')
-		ft_pointer(va_arg(*args, size_t), len);
+		ft_pointer(va_arg(*args, unsigned long long), len);
 	else if (s == 'c')
 		ft_putchar_plus(va_arg(*args, int), len);
 	else if (s == '%')
