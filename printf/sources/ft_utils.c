@@ -6,7 +6,7 @@
 /*   By: rbenaiss <rbenaiss@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 00:12:18 by rbenaiss          #+#    #+#             */
-/*   Updated: 2023/02/19 00:35:56 by rbenaiss         ###   ########.fr       */
+/*   Updated: 2023/03/03 20:00:58 by rbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ft_printnb(int number, int *length)
 	Updates length.
 */
 
-void	ft_pointer(size_t pointer, int *length)
+void	ft_pointer(unsigned long pointer, int *length)
 {
 	char	adress[25];
 	int		i;
@@ -53,7 +53,7 @@ void	ft_pointer(size_t pointer, int *length)
 	base_character = "0123456789abcdef";
 	i = 0;
 	write(1, "0x", 2);
-	(*length) += 2;
+	*(length) += 2;
 	if (pointer == 0)
 	{
 		ft_putchar_plus('0', length);

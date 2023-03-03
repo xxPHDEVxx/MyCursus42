@@ -75,6 +75,11 @@ char	*get_next_line(int fd)
 	if (!buf)
 		return (0);
 	line = get_content(fd, buf, backup);
+	if (line == 0)
+	{
+		free (backup);
+		backup = NULL;
+	}
 	free (buf);
 	buf = NULL;
 	if (!line)
