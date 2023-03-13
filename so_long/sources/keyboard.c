@@ -6,12 +6,12 @@
 /*   By: rbenaiss <rbenaiss@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 01:29:01 by rbenaiss          #+#    #+#             */
-/*   Updated: 2023/03/11 17:53:31 by rbenaiss         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:26:01 by rbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/mario.h"
-#include "../printf/include/ft_printf.h"
+#include "../printf/includes/ft_printf.h"
 
 void	haut(t_game *game)
 {
@@ -49,7 +49,7 @@ void	droite(t_game *game)
 int	keyboard(int keyhook, t_game *game)
 {
 	if (keyhook == 53)
-		close(game);
+		close_window(game);
 	if (game->points == 0
 		&& ((keyhook == 2 && game->map[game->player_y][game->player_x + 1] == 'E')
 		|| (keyhook == 1 && game->map[game->player_y + 1][game->player_x] == 'E')
@@ -57,7 +57,7 @@ int	keyboard(int keyhook, t_game *game)
 		|| (keyhook == 13 && game->map[game->player_y - 1][game->player_x] == 'E')))
 	{
 		ft_printf("WINNER\n");
-		close(game);
+		close_window(game);
 	}
 	if (keyhook == 13 && game->map[game->player_y - 1][game->player_x] != '1'
 		&& game->map[game->player_y - 1][game->player_x] != 'E')

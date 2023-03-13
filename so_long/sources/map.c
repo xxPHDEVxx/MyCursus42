@@ -6,7 +6,7 @@
 /*   By: rbenaiss <rbenaiss@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 23:34:53 by rbenaiss          #+#    #+#             */
-/*   Updated: 2023/03/11 17:50:17 by rbenaiss         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:06:12 by rbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -275,7 +275,7 @@ char    *get_map(int fd)
     while (!check_line(line) && rd_bytes > 0)
     {
         rd_bytes = read(fd, &buf, 1);
-        if (rd_bytes == 0 && line[0] == '\0' || rd_bytes < 0)
+        if (rd_bytes == 0 && (line[0] == '\0' || rd_bytes < 0))
         {
             free(line);
             ft_printf("empty map\n");

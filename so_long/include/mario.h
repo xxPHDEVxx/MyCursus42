@@ -6,7 +6,7 @@
 /*   By: rbenaiss <rbenaiss@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 17:47:37 by rbenaiss          #+#    #+#             */
-/*   Updated: 2023/03/11 17:52:52 by rbenaiss         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:16:02 by rbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include "../printf/includes/ft_printf.h"
 # include "../libft/libft.h"
 # include <fcntl.h>
+# include <mlx.h>
 
 
 typedef struct s_mario

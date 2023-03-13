@@ -29,7 +29,7 @@ void initialize(t_game *game) {
     game->pixel = 0;
     game->player = 0;
     game->moove = 0;
-    game->orientation = "./images/bas.xpm";
+    game->orientation = "./data/bas.xpm";
     game->points = 0;
     game->exit = 0;
 }
