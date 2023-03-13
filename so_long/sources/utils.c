@@ -6,7 +6,7 @@
 /*   By: rbenaiss <rbenaiss@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 18:09:08 by rbenaiss          #+#    #+#             */
-/*   Updated: 2023/03/11 17:50:54 by rbenaiss         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:21:37 by rbenaiss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	check_arg(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		ft_printf("Error\n");
+		ft_printf("Error : add a map \n");
 		exit(0);
 	}
 	len = ft_strlen(argv[1]);
@@ -38,7 +38,7 @@ void	map(char **argv, t_game *game)
 	char	**map_x;
 	char	*buf;
 
-	fd = open(argv[1], 0_RDONLY);
+	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
 		ft_printf("file error\n");

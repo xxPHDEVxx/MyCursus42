@@ -27,7 +27,7 @@ void fill_background(t_game *game)
         game->x = 0;
         while (game->x < game->map_x) {
             game->file = mlx_xpm_file_to_image(game->id,
-                         "./images/surface.xpm", &game->pixel, &game->pixel);
+                         "./data/surface.xpm", &game->pixel, &game->pixel);
             mlx_put_image_to_window(game->id, game->window,
                                     game->file, game->pixel * game->x,
                                     game->pixel * game->y);
@@ -41,7 +41,7 @@ void put_image_to_window(t_game *game, char *path)
 {
     game->file = mlx_xpm_file_to_image(game->id, path, &game->pixel, &game->pixel);
     if (!game->file) {
-        ft_printf("Error\nImpossible de lire l'image.\n");
+        ft_printf("Error : Impossible to read the picture.\n");
         exit(1);
     }
     mlx_put_image_to_window(game->id, game->window, game->file, game->pixel * game->x, game->pixel * game->y);
@@ -49,17 +49,17 @@ void put_image_to_window(t_game *game, char *path)
 
 void put_limits(t_game *game)
 {
-    put_image_to_window(game, "./images/arbre.xpm");
+    put_image_to_window(game, "./data/arbre.xpm");
 }
 
 void put_floor(t_game *game)
 {
-    put_image_to_window(game, "./images/surface.xpm");
+    put_image_to_window(game, "./data/surface.xpm");
 }
 
 void put_points(t_game *game)
 {
-    put_image_to_window(game, "./images/point.xpm");
+    put_image_to_window(game, "./data/point.xpm");
     game->points++;
 }
 
@@ -74,9 +74,9 @@ void put_exit(t_game *game)
 {
     char *path;
     if (game->points == 0)
-        path = "./images/sortie.xpm";
+        path = "./data/sortie.xpm";
     else
-        path = "./images/bloque.xpm";
+        path = "./data/bloque.xpm";
 
     put_image_to_window(game, path);
 }

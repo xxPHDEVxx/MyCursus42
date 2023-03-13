@@ -7,7 +7,7 @@ MINILIBX	= mlx
 CC			= gcc
 CFLAGS		= -Wall -Werror -Wextra
 RM			= rm -rf
-LINKS	    = -I /usr/X11/include -L /usr/X11/lib -lmlx \
+LINKS	    = -I /usr/local/include -L /usr/local/lib -lmlx \
 		      -framework OpenGL -framework AppKit
 SRC_DIR		= 	sources/
 MAND_FILES	=	mario map window utils keyboard
