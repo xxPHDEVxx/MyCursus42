@@ -1,2 +1,2 @@
 # MyCursus42
-  I will put there all my work during my cursus in school 42
+  Mon code durant ma formation à l'école 42.
