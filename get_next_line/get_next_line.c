@@ -47,7 +47,7 @@ static char	*get_content(int fd, char *buf, char *backup)
 /*
  * extract the first part of the content that finished by a '\n'.
  * return the backup with the rest of the content.
- * line = part of the file's content that finished by a '\n'.
+ * line = part of the file's content that finished by '\n'.
 */
 
 static char	*line_extractor(char *line)
